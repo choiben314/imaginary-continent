@@ -24,6 +24,61 @@ Prevailing wind direction and speed; upper and lower
 
 Datasets Used:
 
-NOAA Global Surface Summary of the Day (GSOD) from Integrated Surface Hourly (ISH) Dataset
-Koppen Classification Data?
+NOAA Global Surface Summary of the Day (GSOD) from Integrated Surface Hourly (ISH) Dataset (WMO Stations/Elevation)
+Koppen Classification Data - Hans Chen
+0.04 Degree Distance to Nearest Coast - NASA Ocean Biology Processing Group
+
+
+1. Get Data
+
+For each latitude/longitude:
+	- proximity to coast
+	- elevation
+	- koppen classification
+	- (avg wind direction and speed)
+
+2. Create common dataset with:
+	- latitude
+	- longitude
+	- elevation
+	- koppen
+	- (avg wind direction and speed)
+
+3. Calculate the following:
+	- closest coastal point
+	- cardinal direction to point
+
+4. Run neural network on input nodes with y=koppen classification:
+	- distance to coastal point
+	- direction to coastal point
+	- elevation
+
+5. Make GUI interface for imaginary continent
+	- run neural network	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
