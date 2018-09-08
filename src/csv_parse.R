@@ -12,3 +12,8 @@ stations <- fread("./imaginary-continent/data/weather_stations_signed_csv.csv")
 stations$Latitude <- stations$Latitude / 100
 stations$Longitude <- stations$Longitude / 100
 fwrite(stations, "./imaginary-continent/data/stations_normalized.csv")
+
+nearest <- fread("./imaginary-continent/data/nearest_coast.csv")
+prelim <- fread("./imaginary-continent/data/training_prelim.csv")
+prelim <- cbind(prelim, Distance = nearest$Distance, Direction = nearest$Direction)
+fwrite(prelim, "./imaginary-continent/data/training_set.csv")
